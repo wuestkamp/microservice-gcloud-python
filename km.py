@@ -1,6 +1,6 @@
 import argparse
 from lib.process import Process
-
+import sys
 
 def run_command(cmd):
     process = Process(cmd)
@@ -21,6 +21,10 @@ args = parser.parse_args()
 
 action = args.action
 cluster_name = args.cluster_name
+
+# gcloud config set project <project-id>
+# gcloud  config set container/cluster staging
+# gcloud config set compute/zone us-east1-c
 
 if action == 'create':
     cmd = f'gcloud container clusters create {cluster_name} --enable-network-policy --zone europe-west3-a -q'

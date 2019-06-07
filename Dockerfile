@@ -22,9 +22,7 @@ RUN apt-get -qqy update && apt-get install -qqy \
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
     apt-get update && \
     apt-get install -y google-cloud-sdk=${CLOUD_SDK_VERSION}-0 \
-        kubectl && \
-    gcloud --version && \
-    kubectl version --client
+    gcloud --version
 
 COPY . /usr/src/app
 

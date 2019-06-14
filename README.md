@@ -15,6 +15,6 @@ docker run -it -e AUTH_JSON=$AUTH_JSON factory delete myclustername europe-west3
 ```
 
 Described in this medium article:
-COMING
+https://medium.com/@wuestkamp/container-factory-microservice-python-docker-gcloud-4f6a9132075a
 
 www.wuestkamp.com
